@@ -1,0 +1,44 @@
+{
+    "servicios": [
+        {
+            "id": 1,
+            "nombre": "Colores lisos, brillos, matte, foil, polvos.",
+            "precio": 9000
+        },
+        {
+            "id": 2,
+            "nombre": "Colores lisos, brillos, matte, foil, polvos, un diseño en cada mano.",
+            "precio": 10000
+        },
+        {
+            "id": 3,
+            "nombre": "Colores lisos, brillos, matte, foil, polvos, dos o tres diseños en cada mano.",
+            "precio": 12000
+        },
+        {
+            "id": 4,
+            "nombre": "Colores lisos, brillos, matte, foil, polvos, cuatro o cinco diseños en cada mano.",
+            "precio": 14000
+        },
+        {
+            "id": 5,
+            "nombre": "Retiro de esmalte permanente realizado por Mangonails.",
+            "precio": 0
+        },
+        {
+            "id": 6,
+            "nombre": "Retiro de esmalte realizado en otro lugar.",
+            "precio": 2000
+        },
+        {
+            "id": 7,
+            "nombre": "Sólo cuando se agenda para retiro (incluye retiro, limado, cutículas, exfoliación, hidratación y aceite).",
+            "precio": 3000
+        },
+        {
+            "id": 8,
+            "nombre": "Parche de reparación.",
+            "precio": 3000
+        }
+    ]
+}

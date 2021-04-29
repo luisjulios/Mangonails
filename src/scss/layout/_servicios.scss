@@ -1,0 +1,51 @@
+.listado-servicios {
+  @include tablet {
+    @include grid(2, 2rem)
+  }
+  @include desktop {
+    @include grid(3, 2rem)
+  }
+  .servicio {
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    background: #FFAFA8;
+    box-shadow:  5px 5px 10px $rosa,
+            -5px -5px 10px $claro;
+    @include tablet {
+      margin-bottom: 0;
+    }
+    p {
+      margin: 0 0 $separacion / 4;
+    }
+    .nombre-servicio {
+      text-align: center;
+      color: $oscuro;
+      font-weight: $regular;
+      font-size: 1.5rem;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .precio-servicio {
+      color: $oscuro;
+      font-weight: $bold;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    &.seleccionado {
+      border-radius: 1rem;
+      background: $oscuro;
+      box-shadow:  5px 5px 10px $oscuro,
+              -5px -5px 10px $rosa;
+      p {
+        color: $claro;
+      }
+    }
+  }
+}
+p.text-center {
+  color: $oscuro;
+}

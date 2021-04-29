@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="build/img/favicon.ico">
+
+    <title>MangoNails</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+    <div class="contenedor-estetica">
+        <div class="col-lg-7 vh-100 w-100 d-none d-md-none d-lg-block sticky-top">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="build/img/1.jpg" class="d-block w-100 vh-100">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="build/img/2.jpg" class="d-block w-100 vh-100">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="build/img/3.jpg" class="d-block w-100 vh-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app col-lg-5">
+            <div class="px-lg-2 pb-lg-1 p2 text-lg-center text-center">
+                <img src="build/img/logo.png" class="img-fluid">
+                <h1>Mangonails</h1>
+            </div>
+            <nav class="tabs">
+                <button type="button" data-paso="1">Servicios</button>
+                <button type="button" data-paso="2">Información Cliente</button>
+                <button type="button" data-paso="3">Resumen</button>
+            </nav>
+            <div id="paso-1" class="seccion">
+                <h2>Servicios disponibles</h2>
+                <p class="text-center">Elige tus servicios a continuación:</p>
+                <div id="servicios" class="listado-servicios"></div>
+            </div>
+            <div id="paso-2" class="seccion">
+            <h2>Tus datos y cita</h2>
+            <p class="text-center">Coloca tus datos y fecha de tu cita:</p>
+                <form class="formulario">
+                    <div class="form-floating pt-2 campo mb-3">
+                        <input type="text" class="form-control pt-4" id="nombre">
+                        <label for="nombre">Nombre &#x1f485;</label>
+                    </div>
+                    <div class="form-floating pt-2 campo mb-3">
+                        <input type="text" class="form-control pt-4" id="apellido">
+                        <label for="apellido">Apellido &#x1f485;</label>
+                    </div>
+                    <div class="form-floating pt-2 campo mb-3">
+                        <input type="tel" class="form-control pt-4" id="telefono" maxlength="9" minlength="9">
+                        <label for="telefono">Teléfono &#x1f4f1;</label>
+                    </div>
+                    <div class="form-floating pt-2 campo mb-3">
+                        <input type="email" class="form-control pt-4" id="email">
+                        <label for="email">Email &#x1f4e7;</label>
+                    </div>
+                    <div class="form-floating pt-2 campo mb-3">
+                        <input type="text" class="form-control pt-4" id="fecha">
+                        <label for="fecha">Fecha &#x1f4c5;</label>
+                    </div>
+                    <div class="form-floating pt-2 campo mb-3">
+                        <select class="form-select" aria-label="Default select example" id="hora" name="hora">
+                            <option disabled selected>Selecciona la hora de tu cita</option>
+                            <option value="10:30:00">10:30 am</option>
+                            <option value="14:30:00">2:30 pm</option>
+                            <option value="17:30:00">5:30 pm</option>
+                            <option value="19:15:00">7:15 pm</option>
+                        </select>
+                        <label for="hora">Hora &#x23f0;</label>
+                    </div>
+                </form>
+            </div>
+            <div id="paso-3" class="seccion contenido-resumen">
+                <h2>Resumen</h2>
+            </div>
+            <div class="paginacion">
+                <button id="anterior">&laquo;Anterior</button>
+                <button id="siguiente">Siguiente&raquo;</button>
+            </div>
+            <div class="text-center redes">
+                <a href="https://api.whatsapp.com/send?phone=+56958894945"><i class="fa fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/mangonails.cl/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.facebook.com/Mangonailscl-105357094763501"><i class="fa fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </div>
+    <script src="build/js/bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $(function(){
+    $("#fecha").datepicker({
+        minDate: '1d',
+        beforeShowDay: $.datepicker.noWeekends,
+        dateFormat: "dd/mm/yy",
+        dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+        monthNames: ['Enera', 'Febrera', 'Marza', 'Abril', 'Maya', 'Junia',
+        'Julia', 'Agosta', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+        firstDay: 1,
+        });
+});
+    </script>
+</body>
+</html>

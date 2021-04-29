@@ -1,0 +1,43 @@
+.contenedor-estetica {
+  @include desktop {
+    @include grid(2, 0);
+  }
+}
+.app {
+  width: 95%;
+  margin: 0 auto;
+  padding-top: $separacion / 2;
+  .seccion {
+    display: none;
+    margin-top: $separacion / 2;
+  }
+}
+.mostrar-seccion {
+  display: block!important;
+}
+.ui-widget-content {
+  background-color: $claro;
+  color: $oscuro;
+}
+.ui-widget-header {
+  color: $oscuro;
+  background-color: $blanco;
+}
+.ui-widget.ui-widget-content {
+  border-radius: 1rem;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highligh {
+  background-color: #99BFA3;
+  color: black;
+  font-weight: $bold;
+  border: 1px solid #5e8067;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+  background-color: $amarillo;
+}
+.fa {
+  color: $oscuro;
+  font-size: 3rem;
+  padding: 1rem;
+
+}

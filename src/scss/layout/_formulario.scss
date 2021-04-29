@@ -1,0 +1,36 @@
+
+.campo {
+  label {
+    flex: 0 0 10rem;
+    color: $oscuro;
+    font-weight: $bold;
+  }
+  input, select {
+    background: $rosa;
+    color: rgba(99, 21, 21, 0.563);
+    font-weight: $bold;
+    font-size: 1.5rem;
+    flex: 1;
+    border-radius: 1rem;
+    border: 1px solid $oscuro;
+    padding: $separacion / 7;
+  }
+}
+
+.alerta {
+  padding: $separacion / 3 ;
+  text-align: center;
+  color: $blanco;
+  width: 100%;
+  font-weight: $bold;
+  display: block;
+  border-radius: 3rem;
+  font-size: 3rem;
+  &.error {
+    background: $oscuro;
+  }
+}
+.form-floating>.form-control, .form-floating>.form-select {
+  height: 5rem;
+  padding: 1rem .75rem;
+}
